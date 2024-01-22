@@ -1,0 +1,727 @@
+{
+	"info": {
+		"_postman_id": "3982d100-ee9a-4aaf-a102-2403bfd9e3aa",
+		"name": "Pruebas Tecnicas UDLA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11254258"
+	},
+	"item": [
+		{
+			"name": "Manuel Montt",
+			"item": [
+				{
+					"name": "Manuel Montt - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;1;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Manuel Montt - Tag - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;2;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Manuel Montt - Tag - Salida",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;2;2;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Antonio Varas",
+			"item": [
+				{
+					"name": "Antonio Varas - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;3;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Antonio Varas - Tag - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;4;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Antonio Varas - Tag - Salida",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;4;2;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Echaurren-140",
+			"item": [
+				{
+					"name": "Echaurren-140 - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;5;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Echaurren-140 - Tag - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;6;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Echaurren-140 - Tag - Salida",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;6;2;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Republica-71",
+			"item": [
+				{
+					"name": "Republica-71 - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;7;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Florida-T",
+			"item": [
+				{
+					"name": "Florida - Tag - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;8;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Florida - Tag - Salida",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;8;2;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Florida - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;9;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Maipu-T",
+			"item": [
+				{
+					"name": "Maipu-T - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;10;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Maipu-T - Tag - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;11;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Maipu-T - Tag - Salida",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;11;2;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Viña 7",
+			"item": [
+				{
+					"name": "Viña 7 Oriente Sur-T - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;13;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Viña 7 Oriente Sur-T - Salida",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;13;2;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Viña 7 Oriente Norte-T - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;14;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Viña 7 Oriente Norte-T - Salida",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;14;2;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Viña 5",
+			"item": [
+				{
+					"name": "Viña 5 Norte-T - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;15;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Viña 5 Norte-T - Salida",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;15;2;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Concepcion - Chacabuco",
+			"item": [
+				{
+					"name": "Concepcion - Chacabuco - Entrada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;16;1;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Concepcion - Chacabuco - Salida",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "RUT",
+								"value": "271948093;16;2;1<EOF>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "192.168.40.16:2942/api/verificador",
+							"host": [
+								"192",
+								"168",
+								"40",
+								"16"
+							],
+							"port": "2942",
+							"path": [
+								"api",
+								"verificador"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

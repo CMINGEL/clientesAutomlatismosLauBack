@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos</title>
+</head>
+<body>
+    <p>Simple upload</p>
+
+    <form method="POST" enctype="multipart/form-data"> 
+        {% csrf_token %}
+        <input type="file" name="myfile">
+        <button type="submit"> Subir Archivo </button>
+    </form>
+
+    {% if uploaded_file_url %}
+    
+    <p>
+        Archivo subido en: <a href = "LOCALHOST:8000/MEDIA/{{ uploaded_file_url }}"> {{ uploaded_file_url }} </a> 
+    </p>
+    {% endif %}
+
+    {{ request.build_absolute_uri  }}
+
+    {% filter force_escape|lower %}
+    This text will be HTML-escaped, and will appear in all lowercase.
+    {% endfilter %}
+
+</body>
+</html>

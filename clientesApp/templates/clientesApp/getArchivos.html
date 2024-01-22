@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% for archivo in Archivos %}
+    
+    <p>
+        Archivo subido en: <a href = "{{ archivo.image_content }}"> {{ archivo.image_content }} </a> 
+    </p>
+    {% endfor %}
+
+</body>
+</html>
