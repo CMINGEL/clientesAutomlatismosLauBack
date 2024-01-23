@@ -24,7 +24,7 @@ class dbClientesSerializer(serializers.ModelSerializer):
     servicios = serializers.StringRelatedField(read_only=True, many=True)
     class Meta:
         model = cliente
-        fields = ('id','nombre', 'numeroContacto', 'email', 'tipoContrato', 'fechaFinContrato', 'fechaFinContrato', 'ejecutivoCierre', 'ejecutivoActual', 'servicios')
+        fields = ('id','nombre', 'numeroContacto', 'email', 'tipoContrato', 'fechaFinContrato', 'fechaInicioContrato', 'ejecutivoCierre', 'ejecutivoActual', 'servicios')
 
 class dbEjecutivosSerializer(serializers.ModelSerializer):
     def validate_nombre(self, value):
