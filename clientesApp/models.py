@@ -23,14 +23,16 @@ class cliente(models.Model):
     
     nombre=models.CharField(max_length=50)
     numeroContacto=models.CharField(max_length=50, null=True, blank=True)
-    email = models.EmailField(max_length=50)
+    email = models.EmailField(max_length=50, null=True, blank=True)
     tipoContrato = models.CharField(max_length=50, null=True, blank=True)
     fechaInicioContrato=models.DateTimeField(null=True, blank=True)
     fechaFinContrato=models.DateTimeField(null=True, blank=True)
     fechaCreacion=models.DateTimeField(auto_now_add=True)
     ejecutivoCierre = models.CharField(max_length=50, null=True, blank=True)
     ejecutivoActual = models.CharField(max_length=50, null=True, blank=True)
+    desistido = models.BooleanField(default=False)
     servicios = models.ManyToManyField(Servicio)
+
     class Meta:
         verbose_name = 'cliente'
         verbose_name_plural = 'clientes'

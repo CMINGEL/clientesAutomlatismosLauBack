@@ -63,6 +63,8 @@ class clientes(APIView):
 
     def post(self, request):
         try:
+            setServicios(pk, request.data.get('servicios'))
+            print(request.data)
             serializer = dbClientesSerializer(data=request.data)
             serializer.is_valid(raise_exception=True)
             serializer.save()
@@ -81,6 +83,7 @@ class clientes(APIView):
         setServicios(pk, request.data.get('servicios'))
         try:
             q = cliente.objects.get(pk=pk)
+            print(request.data)
             
             serializer = dbClientesSerializer(q, data=request.data, partial=True)
             if serializer.is_valid():
@@ -150,14 +153,14 @@ class Servicios(APIView):
         try:
             q = Servicio.objects.get(pk=pk)
             q.delete()
-            return Response({"message":"success", "Eliminado":q.nombre},status=status.HTTP_202_ACCEPTED)
+            return Response({"message":"success", "Eliminado":q.tipoServicio},status=status.HTTP_202_ACCEPTED)
         except:
             raise Http404
 
     def patch(self, request, pk):
         try:
             q = Servicio.objects.get(pk=pk)
-            serializer = ServiciosSerializers(q, data=request.data, partial=True)
+            serializer = ServiciosSerializers(q, data=request.data)
             if serializer.is_valid():
                 serializer.save()
             return Response({"message":"success", "Actualizado":q.tipoServicio},status=status.HTTP_202_ACCEPTED)
