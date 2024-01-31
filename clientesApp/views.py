@@ -10,7 +10,8 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from django.views.decorators.csrf import csrf_exempt
 #Manejo de archivos
 from django.core.files.storage import FileSystemStorage
-#
+import io
+
 
 class ejecutivos(APIView):
     def get(self, request):
@@ -29,7 +30,6 @@ class ejecutivos(APIView):
     def patch(self, request, pk):
         JWT_authenticator = JWTAuthentication()
         response = JWT_authenticator.authenticate(request)
-        print(response)
         if(response):
             user, token = response
             if(user.is_superuser):
@@ -63,11 +63,11 @@ class clientes(APIView):
 
     def post(self, request):
         try:
-            setServicios(pk, request.data.get('servicios'))
-            print(request.data)
             serializer = dbClientesSerializer(data=request.data)
             serializer.is_valid(raise_exception=True)
             serializer.save()
+            setServicios(serializer.data['id'], request.data.get('servicios'))
+
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         except:
             raise Http404
@@ -83,8 +83,6 @@ class clientes(APIView):
         setServicios(pk, request.data.get('servicios'))
         try:
             q = cliente.objects.get(pk=pk)
-            print(request.data)
-            
             serializer = dbClientesSerializer(q, data=request.data, partial=True)
             if serializer.is_valid():
                 serializer.save()
@@ -144,7 +142,6 @@ class Servicios(APIView):
 
     def post(self, request):
         serializer = ServiciosSerializers(data = request.data)
-        print(request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -173,7 +170,7 @@ def setServicios(clietenID, serviciosName='0'):
         clientePatch.servicios.clear()
         for servicioCliente in serviciosName:
             id = Servicio.objects.get(tipoServicio=servicioCliente)
-            print(id.pk)
+            #print(id.pk)
             clientePatch.servicios.add(id.pk)
     except:
         print('Service DoesNotExist')
