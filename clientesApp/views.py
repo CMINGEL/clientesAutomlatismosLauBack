@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import HttpResponse
 from .models import cliente, ejecutivo, Archivo, Servicio
 from .serializers import dbClientesSerializer, dbEjecutivosSerializer, UserSerializer, ServiciosSerializers
 from rest_framework import status
@@ -10,15 +10,24 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from django.views.decorators.csrf import csrf_exempt
 #Manejo de archivos
 from django.core.files.storage import FileSystemStorage
-import io
+import csv
 
 
 class ejecutivos(APIView):
     def get(self, request):
         try:
+            JWT_authenticator = JWTAuthentication()
+            response = JWT_authenticator.authenticate(request)
+            if response:
+                print('Autenticado')
+                user, token = response
+                print(user)
+                print(token)
             datos = ejecutivo.objects.all()
             serializer = dbEjecutivosSerializer(datos, many=True)
             return Response(serializer.data, status=status.HTTP_202_ACCEPTED) 
+            #else: 
+                #return Response(status=status.HTTP_401_UNAUTHORIZED)
         except ejecutivo.DoesNotExist:
             raise Http404
     def post(self, request):
@@ -74,10 +83,10 @@ class clientes(APIView):
 
     def patch(self, request, pk):
         #TODO if pk si existe
-        # JWT_authenticator = JWTAuthentication()
-        # response = JWT_authenticator.authenticate(request)
+        #JWT_authenticator = JWTAuthentication()
+        #response = JWT_authenticator.authenticate(request)
         #print(response)
-        # if(response):
+        #if(response):
         #     user, token = response
             # if(user.is_superuser):
         setServicios(pk, request.data.get('servicios'))
@@ -175,3 +184,39 @@ def setServicios(clietenID, serviciosName='0'):
     except:
         print('Service DoesNotExist')
 
+
+
+def descargaxls(request):
+    registros= cliente.objects.all()
+    response = HttpResponse(content_type='text/csv')
+
+    response['Content-Disposition'] = 'attachment; filename="archivo.csv"'
+    writer = csv.writer(response, delimiter=';', quotechar=';', quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(['id', 'Cliente','Numero Contacto', 'Email contraparte', 'Tipo contrato ','Fecha fin contrato', 'Fecha de Inicio contrato', 'Ejecutivo actual ',
+                        'Ejecutivo Cierre','Desistido', 'Servicios'])
+
+    for registro in registros:
+        writer.writerow([registro.pk, registro.nombre, registro.numeroContacto, registro.email, registro.tipoContrato, registro.fechaFinContrato, registro.fechaInicioContrato,
+                            registro.ejecutivoCierre, registro.ejecutivoActual, registro.desistido, registro.servicios.all()])
+    return response
+
+class ejecutivosT(APIView):
+    def get(self, request):
+        print("Autenticacion: {}".format(request.auth))
+        print("Cuerpo: {}".format(request.data))
+        try:
+            JWT_authenticator = JWTAuthentication()
+            response = JWT_authenticator.authenticate(request)
+            if response:
+                user, token = response
+                print(user)
+                print(token)
+                datos = ejecutivo.objects.all()
+                serializer = dbEjecutivosSerializer(datos, many=True)
+                return Response(serializer.data, status=status.HTTP_202_ACCEPTED) 
+            else: 
+                return Response(status=status.HTTP_401_UNAUTHORIZED)
+
+
+        except ejecutivo.DoesNotExist:
+            raise Http404

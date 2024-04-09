@@ -18,6 +18,9 @@ urlpatterns = [
 
     path('subirarchivos/', views.simple_upload.as_view(), name='subirArchivos'),
     path('subirarchivos/<int:pk>/', views.simple_upload.as_view(), name='verArchivos'),
+
+    path('registros/', views.descargaxls, name='registros'),
+    path('ejecutivosT/', views.ejecutivosT.as_view(), name='ejecutivos'),
 ]
 
 #Subir documentos

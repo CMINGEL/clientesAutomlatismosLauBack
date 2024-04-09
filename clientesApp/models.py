@@ -21,7 +21,7 @@ class Servicio(models.Model):
 
 class cliente(models.Model):
     
-    nombre=models.CharField(max_length=50, null=True, blank= True)
+    nombre=models.CharField(max_length=50)
     numeroContacto=models.CharField(max_length=50, null=True, blank=True)
     email = models.EmailField(max_length=50, null=True, blank=True)
     tipoContrato = models.CharField(max_length=50, null=True, blank=True)
